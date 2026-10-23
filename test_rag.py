@@ -45,7 +45,7 @@ class TestRAGPipeline(unittest.TestCase):
         cls.temp_dir = tempfile.TemporaryDirectory(ignore_cleanup_errors=True)
         cls.test_db_dir = cls.temp_dir.name
         cls.ref_dir = Path("tests/fixtures/reference_materials")
-
+        cls.ref_dir = Path("tests/fixtures")
         cls.pipeline = RAGPipeline(
             persist_directory=cls.test_db_dir,
             collection_name="test_reference_collection"
